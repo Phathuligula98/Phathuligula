@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- ==================================================
+    Mzansi Bite - Homepage
+    Author: [Your Name]
+    Student Number: [Your Student Number]
+    Date: August 2026
+    Description: Homepage for Mzansi Bite food truck business
+    ================================================== -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mzansi Bite | Home - Authentic South African Street Food</title>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@300;400;700&family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- External CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- ==================================================
+    HEADER & NAVIGATION
+    ================================================== -->
+    <header>
+        <div class="header-top">
+            <div class="container">
+                <p class="location-banner">
+                    <i class="fas fa-map-marker-alt"></i> 
+                    Today's Locations: Sandton | Rosebank | Pretoria CBD
+                    <span class="hours"><i class="far fa-clock"></i> 11:00 - 20:00</span>
+                </p>
+            </div>
+        </div>
+        
+        <nav class="navbar">
+            <div class="container">
+                <div class="logo">
+                    <a href="index.html">
+                        <i class="fas fa-utensils"></i>
+                        <span>Mzansi <strong>Bite</strong></span>
+                    </a>
+                </div>
+                
+                <!-- Hamburger menu for mobile -->
+                <button class="hamburger" aria-label="Toggle navigation">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                
+                <ul class="nav-menu">
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="services.html">Menu</a></li>
+                    <li><a href="enquiry.html">Pre-Order</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li class="nav-cta"><a href="enquiry.html" class="btn-order">Order Now</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- ==================================================
+    MAIN CONTENT
+    ================================================== -->
+    <main>
+
+        <!-- ===== HERO SECTION ===== -->
+        <section class="hero">
+            <div class="hero-overlay">
+                <div class="container hero-content">
+                    <h1 class="hero-title">Taste the Rainbow of <br><span>South Africa</span></h1>
+                    <p class="hero-subtitle">
+                        Authentic gourmet street food made with love, using locally sourced ingredients.
+                        Find our food trucks across Johannesburg and Pretoria.
+                    </p>
+                    <div class="hero-buttons">
+                        <a href="services.html" class="btn btn-primary">View Menu <i class="fas fa-arrow-right"></i></a>
+                        <a href="enquiry.html" class="btn btn-secondary">Pre-Order Now</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== FEATURED ITEMS ===== -->
+        <section class="featured-items">
+            <div class="container">
+                <h2 class="section-title">Our <span>Bestsellers</span></h2>
+                <p class="section-subtitle">Customer favourites you simply have to try</p>
+                
+                <div class="items-grid">
+                    <div class="item-card">
+                        <div class="item-image">
+                            <img src="images/bunny-chow.jpg" alt="Rainbow Bunny Chow" loading="lazy">
+                            <span class="item-badge">Most Popular</span>
+                        </div>
+                        <div class="item-info">
+                            <h3>Rainbow Bunny Chow</h3>
+                            <p>Quarter loaf hollowed and filled with aromatic Durban-style curry. Choose chicken, lamb, or veggie.</p>
+                            <div class="item-meta">
+                                <span class="item-price">R65</span>
+                                <span class="item-diet"><i class="fas fa-leaf"></i> Veggie Option</span>
+                            </div>
+                            <a href="enquiry.html" class="btn btn-small">Order Now</a>
+                        </div>
+                    </div>
+                    
+                    <div class="item-card">
+                        <div class="item-image">
+                            <img src="images/boerewos-roll.jpg" alt="Boerewos Roll" loading="lazy">
+                            <span class="item-badge">Fan Favourite</span>
+                        </div>
+                        <div class="item-info">
+                            <h3>Smoked Boerewos Roll</h3>
+                            <p>Grilled boerewos served on a fresh Portuguese roll with caramelised onions, chakalaka sauce, and cheese.</p>
+                            <div class="item-meta">
+                                <span class="item-price">R55</span>
+                                <span class="item-diet"><i class="fas fa-utensils"></i> Halal</span>
+                            </div>
+                            <a href="enquiry.html" class="btn btn-small">Order Now</a>
+                        </div>
+                    </div>
+                    
+                    <div class="item-card">
+                        <div class="item-image">
+                            <img src="images/vetkoek.jpg" alt="Vetkoek" loading="lazy">
+                            <span class="item-badge">New!</span>
+                        </div>
+                        <div class="item-info">
+                            <h3>Gourmet Vetkoek</h3>
+                            <p>Golden fried dough filled with spiced minced beef, topped with peri-peri mayo and fresh coriander.</p>
+                            <div class="item-meta">
+                                <span class="item-price">R45</span>
+                                <span class="item-diet"><i class="fas fa-pepper-hot"></i> Spicy</span>
+                            </div>
+                            <a href="enquiry.html" class="btn btn-small">Order Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== WHY CHOOSE US ===== -->
+        <section class="why-us">
+            <div class="container">
+                <h2 class="section-title">Why <span>Mzansi Bite</span>?</h2>
+                <div class="features-grid">
+                    <div class="feature">
+                        <div class="feature-icon"><i class="fas fa-leaf"></i></div>
+                        <h3>Local & Fresh</h3>
+                        <p>We source ingredients from South African farmers and suppliers, supporting local communities.</p>
+                    </div>
+                    <div class="feature">
+                        <div class="feature-icon"><i class="fas fa-truck"></i></div>
+                        <h3>Always Near You</h3>
+                        <p>With 3 trucks operating daily, we're always within reach. Check our locations page for daily updates.</p>
+                    </div>
+                    <div class="feature">
+                        <div class="feature-icon"><i class="fas fa-heart"></i></div>
+                        <h3>Made with Passion</h3>
+                        <p>Every dish is prepared with love by our team of passionate chefs who celebrate South African cuisine.</p>
+                    </div>
+                    <div class="feature">
+                        <div class="feature-icon"><i class="fas fa-star"></i></div>
+                        <h3>5-Star Rated</h3>
+                        <p>Our customers love us! We maintain a 4.9/5 rating across Google, Facebook, and Instagram reviews.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== TESTIMONIALS ===== -->
+        <section class="testimonials">
+            <div class="container">
+                <h2 class="section-title">What Our <span>Customers Say</span></h2>
+                <div class="testimonials-grid">
+                    <blockquote class="testimonial">
+                        <p>"The rainbow bunny chow is out of this world! Best street food I've had in Johannesburg. Can't wait to try the rest of the menu."</p>
+                        <cite>— Sipho M., Sandton</cite>
+                        <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                    </blockquote>
+                    <blockquote class="testimonial">
+                        <p>"Finally a food truck that takes pride in South African flavors! The boerewos roll with chakalaka sauce is absolutely perfect."</p>
+                        <cite>— Lerato K., Pretoria</cite>
+                        <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                    </blockquote>
+                    <blockquote class="testimonial">
+                        <p>"We used Mzansi Bite for our corporate event and everyone raved about the food. Professional, delicious, and authentic. Highly recommend!"</p>
+                        <cite>— Thabo N., Rosebank</cite>
+                        <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                    </blockquote>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== CALL TO ACTION ===== -->
+        <section class="cta-section">
+            <div class="container">
+                <h2>Ready to Taste <span>South Africa</span>?</h2>
+                <p>Find our truck today or pre-order your meal to skip the queue!</p>
+                <div class="cta-buttons">
+                    <a href="services.html" class="btn btn-primary">Explore Menu</a>
+                    <a href="contact.html" class="btn btn-secondary">Find Us</a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ==================================================
+    FOOTER
+    ================================================== -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-about">
+                    <h3><i class="fas fa-utensils"></i> Mzansi Bite</h3>
+                    <p>Celebrating South Africa's diverse culinary heritage through gourmet street food. Fresh, local, and made with passion.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+                        <a href="#" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="services.html">Menu</a></li>
+                        <li><a href="enquiry.html">Pre-Order</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-contact">
+                    <h4>Get In Touch</h4>
+                    <p><i class="fas fa-phone"></i> +27 82 123 4567</p>
+                    <p><i class="fas fa-envelope"></i> info@mzansibite.co.za</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Johannesburg & Pretoria</p>
+                    <p><i class="far fa-clock"></i> Mon-Sat: 11:00 - 20:00</p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2026 Mzansi Bite. All rights reserved.</p>
+                <p>Designed with <i class="fas fa-heart" style="color: #FF6B00;"></i> in South Africa</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ==================================================
+    EXTERNAL JAVASCRIPT
+    ================================================== -->
+    <script src="js/main.js"></script>
+</body>
+</html>

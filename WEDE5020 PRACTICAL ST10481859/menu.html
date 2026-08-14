@@ -1,0 +1,1071 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mzansi Bite | Our Menu - South African Street Food</title>
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        /* ============================================================
+           RESET & BASE STYLES
+           ============================================================ */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #2D2D2D;
+            background: #FFF8F0;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* ============================================================
+           HEADER TOP BANNER
+           ============================================================ */
+        .header-top {
+            background: #4A2C1A;
+            color: #FFF8F0;
+            padding: 8px 0;
+            font-size: 14px;
+            text-align: center;
+        }
+
+        .header-top i {
+            color: #FF6B00;
+        }
+
+        .header-top .hours {
+            margin-left: 20px;
+        }
+
+        /* ============================================================
+           NAVIGATION
+           ============================================================ */
+        .navbar {
+            background: #FFF8F0;
+            padding: 15px 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .navbar .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo a {
+            font-size: 28px;
+            font-weight: 700;
+            color: #4A2C1A;
+            text-decoration: none;
+        }
+
+        .logo a i {
+            color: #FF6B00;
+            margin-right: 5px;
+        }
+
+        .logo a span {
+            font-weight: 300;
+        }
+
+        .logo a strong {
+            color: #FF6B00;
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 25px;
+            align-items: center;
+        }
+
+        .nav-menu a {
+            text-decoration: none;
+            color: #4A2C1A;
+            font-weight: 600;
+            font-size: 16px;
+            transition: color 0.3s;
+        }
+
+        .nav-menu a:hover,
+        .nav-menu a.active {
+            color: #FF6B00;
+        }
+
+        .nav-menu a.active {
+            border-bottom: 3px solid #FF6B00;
+            padding-bottom: 5px;
+        }
+
+        .btn-order {
+            background: #FF6B00;
+            color: #FFF !important;
+            padding: 10px 25px;
+            border-radius: 30px;
+            font-weight: 700 !important;
+            transition: background 0.3s;
+        }
+
+        .btn-order:hover {
+            background: #E05E00 !important;
+            color: #FFF !important;
+        }
+
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            background: none;
+            border: none;
+            cursor: pointer;
+        }
+
+        .hamburger span {
+            width: 28px;
+            height: 3px;
+            background: #4A2C1A;
+            border-radius: 3px;
+            transition: 0.3s;
+        }
+
+        /* ============================================================
+           BUTTONS
+           ============================================================ */
+        .btn {
+            display: inline-block;
+            padding: 10px 25px;
+            border-radius: 30px;
+            font-weight: 700;
+            text-decoration: none;
+            transition: all 0.3s;
+            font-size: 14px;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn-primary {
+            background: #FF6B00;
+            color: #FFF;
+        }
+
+        .btn-primary:hover {
+            background: #E05E00;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 20px rgba(255, 107, 0, 0.4);
+        }
+
+        .btn-small {
+            padding: 6px 18px;
+            font-size: 13px;
+        }
+
+        /* ============================================================
+           SECTION TITLES
+           ============================================================ */
+        .section-title {
+            font-size: 36px;
+            text-align: center;
+            margin-bottom: 10px;
+            color: #4A2C1A;
+        }
+
+        .section-title span {
+            color: #FF6B00;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            color: #666;
+            font-size: 18px;
+            margin-bottom: 40px;
+        }
+
+        /* ============================================================
+           PAGE HEADER
+           ============================================================ */
+        .page-header {
+            background: linear-gradient(135deg, #4A2C1A, #2D1A0E);
+            color: #FFF;
+            padding: 60px 0;
+            text-align: center;
+        }
+
+        .page-header h1 {
+            font-size: 44px;
+        }
+
+        .page-header h1 span {
+            color: #FF6B00;
+        }
+
+        .page-header p {
+            font-size: 18px;
+            opacity: 0.9;
+            margin-top: 10px;
+        }
+
+        /* ============================================================
+           FILTER BUTTONS
+           ============================================================ */
+        .menu-filters {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            flex-wrap: wrap;
+            margin-top: 25px;
+        }
+
+        .filter-btn {
+            padding: 10px 25px;
+            border: 2px solid #FFF;
+            background: transparent;
+            color: #FFF;
+            border-radius: 30px;
+            font-weight: 600;
+            font-size: 14px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .filter-btn:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        .filter-btn.active {
+            background: #FF6B00;
+            border-color: #FF6B00;
+            color: #FFF;
+        }
+
+        /* ============================================================
+           MENU SECTION
+           ============================================================ */
+        .menu-section {
+            padding: 60px 0;
+        }
+
+        .menu-section:nth-child(even) {
+            background: #F5F0EB;
+        }
+
+        .menu-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+            gap: 30px;
+        }
+
+        /* Menu Item Card */
+        .menu-item {
+            background: #FFF;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            transition: transform 0.3s, box-shadow 0.3s;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .menu-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 40px rgba(0,0,0,0.15);
+        }
+
+        .menu-item-image {
+            height: 200px;
+            background: #E8E0D8;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #999;
+            font-size: 14px;
+            position: relative;
+            flex-shrink: 0;
+        }
+
+        .menu-item-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .menu-badge {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: #FF6B00;
+            color: #FFF;
+            padding: 4px 14px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+
+        .menu-item-details {
+            padding: 20px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .menu-item-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 8px;
+        }
+
+        .menu-item-header h3 {
+            font-size: 20px;
+            color: #4A2C1A;
+        }
+
+        .menu-item-header h3 .diet-icon {
+            font-size: 14px;
+            color: #2e7d32;
+            margin-left: 5px;
+        }
+
+        .menu-price {
+            font-size: 22px;
+            font-weight: 700;
+            color: #FF6B00;
+            white-space: nowrap;
+            margin-left: 10px;
+        }
+
+        .menu-item-details p {
+            color: #666;
+            font-size: 14px;
+            line-height: 1.6;
+            margin-bottom: 12px;
+            flex: 1;
+        }
+
+        .menu-item-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: auto;
+        }
+
+        .menu-diet {
+            font-size: 13px;
+            color: #555;
+            background: #F5F0EB;
+            padding: 3px 12px;
+            border-radius: 15px;
+        }
+
+        .menu-diet i {
+            margin-right: 4px;
+            color: #FF6B00;
+        }
+
+        /* ============================================================
+           CATERING SECTION
+           ============================================================ */
+        .catering-section {
+            padding: 70px 0;
+            background: linear-gradient(135deg, #4A2C1A, #2D1A0E);
+            color: #FFF;
+            text-align: center;
+        }
+
+        .catering-section .section-title {
+            color: #FFF;
+        }
+
+        .catering-section .section-title span {
+            color: #FF6B00;
+        }
+
+        .catering-section .section-subtitle {
+            color: #CCC;
+        }
+
+        .catering-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin: 40px 0;
+        }
+
+        .catering-card {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 30px;
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: transform 0.3s;
+            text-align: left;
+        }
+
+        .catering-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .catering-card i {
+            font-size: 40px;
+            color: #FF6B00;
+            margin-bottom: 15px;
+        }
+
+        .catering-card h3 {
+            margin-bottom: 15px;
+        }
+
+        .catering-card ul {
+            list-style: none;
+        }
+
+        .catering-card ul li {
+            padding: 5px 0;
+            color: #DDD;
+        }
+
+        .catering-card ul li i {
+            font-size: 14px;
+            color: #4CAF50;
+            margin-right: 10px;
+        }
+
+        .catering-cta {
+            margin-top: 30px;
+        }
+
+        .catering-cta p {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+
+        /* ============================================================
+           FOOTER
+           ============================================================ */
+        footer {
+            background: #1B0F08;
+            color: #CCC;
+            padding: 50px 0 20px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 40px;
+            margin-bottom: 30px;
+        }
+
+        .footer-about h3 {
+            color: #FFF;
+            font-size: 24px;
+            margin-bottom: 15px;
+        }
+
+        .footer-about h3 i {
+            color: #FF6B00;
+        }
+
+        .footer-about p {
+            line-height: 1.8;
+            font-size: 14px;
+        }
+
+        .social-links {
+            margin-top: 15px;
+            display: flex;
+            gap: 12px;
+        }
+
+        .social-links a {
+            color: #FFF;
+            background: #4A2C1A;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background 0.3s;
+            text-decoration: none;
+        }
+
+        .social-links a:hover {
+            background: #FF6B00;
+        }
+
+        .footer-links h4,
+        .footer-contact h4 {
+            color: #FFF;
+            margin-bottom: 15px;
+            font-size: 18px;
+        }
+
+        .footer-links ul {
+            list-style: none;
+        }
+
+        .footer-links ul li {
+            margin-bottom: 8px;
+        }
+
+        .footer-links ul li a {
+            color: #CCC;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer-links ul li a:hover {
+            color: #FF6B00;
+        }
+
+        .footer-contact p {
+            margin-bottom: 8px;
+            font-size: 14px;
+        }
+
+        .footer-contact i {
+            color: #FF6B00;
+            width: 25px;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid #333;
+            padding-top: 20px;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            font-size: 14px;
+        }
+
+        .footer-bottom i {
+            color: #FF6B00;
+        }
+
+        /* ============================================================
+           RESPONSIVE DESIGN
+           ============================================================ */
+        @media (max-width: 768px) {
+            .hamburger {
+                display: flex;
+            }
+
+            .nav-menu {
+                display: none;
+                flex-direction: column;
+                width: 100%;
+                background: #FFF8F0;
+                padding: 20px;
+                position: absolute;
+                top: 70px;
+                left: 0;
+                box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+                gap: 15px;
+            }
+
+            .nav-menu.active {
+                display: flex;
+            }
+
+            .page-header h1 {
+                font-size: 32px;
+            }
+
+            .section-title {
+                font-size: 28px;
+            }
+
+            .menu-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-bottom {
+                flex-direction: column;
+                text-align: center;
+                gap: 10px;
+            }
+
+            .header-top .hours {
+                display: block;
+                margin-left: 0;
+            }
+
+            .menu-filters {
+                gap: 8px;
+            }
+
+            .filter-btn {
+                padding: 6px 15px;
+                font-size: 12px;
+            }
+
+            .menu-item-header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .menu-price {
+                margin-left: 0;
+                margin-top: 5px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .page-header h1 {
+                font-size: 26px;
+            }
+
+            .section-title {
+                font-size: 24px;
+            }
+
+            .menu-item-image {
+                height: 150px;
+            }
+
+            .catering-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- ============================================================
+    HEADER TOP BANNER
+    ============================================================ -->
+    <div class="header-top">
+        <div class="container">
+            <i class="fas fa-map-marker-alt"></i> 
+            Today's Locations: Sandton | Rosebank | Pretoria CBD
+            <span class="hours"><i class="far fa-clock"></i> 11:00 - 20:00</span>
+        </div>
+    </div>
+
+    <!-- ============================================================
+    NAVIGATION
+    ============================================================ -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">
+                    <i class="fas fa-utensils"></i>
+                    <span>Mzansi <strong>Bite</strong></span>
+                </a>
+            </div>
+            
+            <button class="hamburger" id="hamburger" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="menu.html" class="active">Menu</a></li>
+                <li><a href="enquiry.html">Pre-Order</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="enquiry.html" class="btn-order">Order Now</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- ============================================================
+    PAGE HEADER
+    ============================================================ -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Our <span>Menu</span></h1>
+            <p>Authentic South African flavours, reimagined. Made fresh daily with locally sourced ingredients.</p>
+            
+            <!-- Filter Buttons -->
+            <div class="menu-filters">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="mains">Main Dishes</button>
+                <button class="filter-btn" data-filter="sides">Sides</button>
+                <button class="filter-btn" data-filter="drinks">Drinks</button>
+                <button class="filter-btn" data-filter="veggie">Vegetarian</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================
+    MAIN CONTENT
+    ============================================================ -->
+    <main>
+
+        <!-- ===== MAIN DISHES ===== -->
+        <section class="menu-section" data-category="mains">
+            <div class="container">
+                <h2 class="section-title">Main <span>Dishes</span></h2>
+                <p class="section-subtitle">Our signature creations that customers keep coming back for</p>
+                
+                <div class="menu-grid">
+                    <!-- Item 1: Rainbow Bunny Chow -->
+                    <div class="menu-item">
+                        <div class="menu-item-image">
+                            <span>🍛 Bunny Chow</span>
+                            <span class="menu-badge">Bestseller</span>
+                        </div>
+                        <div class="menu-item-details">
+                            <div class="menu-item-header">
+                                <h3>Rainbow Bunny Chow <span class="diet-icon"><i class="fas fa-leaf" title="Vegetarian option available"></i></span></h3>
+                                <span class="menu-price">R65</span>
+                            </div>
+                            <p>Quarter loaf hollowed and filled with aromatic Durban-style curry. Choose chicken, lamb, or vegetarian. Served with sambal and fresh coriander.</p>
+                            <div class="menu-item-footer">
+                                <span class="menu-diet"><i class="fas fa-utensils"></i> Halal</span>
+                                <span class="menu-diet"><i class="fas fa-pepper-hot"></i> Mild-Spicy</span>
+                                <a href="enquiry.html" class="btn btn-primary btn-small">Pre-Order</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Item 2: Smoked Boerewos Roll -->
+                    <div class="menu-item">
+                        <div class="menu-item-image">
+                            <span>🌭 Boerewos Roll</span>
+                            <span class="menu-badge">Fan Favourite</span>
+                        </div>
+                        <div class="menu-item-details">
+                            <div class="menu-item-header">
+                                <h3>Smoked Boerewos Roll</h3>
+                                <span class="menu-price">R55</span>
+                            </div>
+                            <p>Grilled boerewos served on a fresh Portuguese roll with caramelised onions, chakalaka sauce, and melted cheddar cheese.</p>
+                            <div class="menu-item-footer">
+                                <span class="menu-diet"><i class="fas fa-utensils"></i> Halal</span>
+                                <span class="menu-diet"><i class="fas fa-pepper-hot"></i> Medium</span>
+                                <a href="enquiry.html" class="btn btn-primary btn-small">Pre-Order</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Item 3: Gourmet Vetkoek -->
+                    <div class="menu-item">
+                        <div class="menu-item-image">
+                            <span>🍞 Vetkoek</span>
+                            <span class="menu-badge">New!</span>
+                        </div>
+                        <div class="menu-item-details">
+                            <div class="menu-item-header">
+                                <h3>Gourmet Vetkoek <span class="diet-icon"><i class="fas fa-leaf" title="Vegetarian option available"></i></span></h3>
+                                <span class="menu-price">R45</span>
+                            </div>
+                            <p>Golden fried dough filled with spiced minced beef or curried chickpeas. Topped with peri-peri mayo and fresh coriander.</p>
+                            <div class="menu-item-footer">
+                                <span class="menu-diet"><i class="fas fa-utensils"></i> Halal</span>
+                                <span class="menu-diet"><i class="fas fa-pepper-hot"></i> Spicy</span>
+                                <a href="enquiry.html" class="btn btn-primary btn-small">Pre-Order</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Item 4: Chicken Kota -->
+                    <div class="menu-item">
+                        <div class="menu-item-image">
+                            <span>🍗 Chicken Kota</span>
+                            <span class="menu-badge">Popular</span>
+                        </div>
+                        <div class="menu-item-details">
+                            <div class="menu-item-header">
+                                <h3>Chicken Kota</h3>
+                                <span class="menu-price">R50</span>
+                            </div>
+                            <p>Quarter bread loaf stuffed with grilled chicken, cheese, coleslaw, and a generous helping of our secret peri-peri sauce.</p>
+                            <div class="menu-item-footer">
+                                <span class="menu-diet"><i class="fas fa-utensils"></i> Halal</span>
+                                <span class="menu-diet"><i class="fas fa-pepper-hot"></i> Mild</span>
+                                <a href="enquiry.html" class="btn btn-primary btn-small">Pre-Order</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== SIDES ===== -->
+        <section class="menu-section" data-category="sides">
+            <div class="container">
+                <h2 class="section-title">Sides & <span>Extras</span></h2>
+                <p class="section-subtitle">The perfect complements to your main meal</p>
+                
+                <div class="menu-grid">
+                    <!-- Side 1: Chakalaka -->
+                    <div class="menu-item">
+                        <div class="menu-item-image">
+                            <span>🌶️ Chakalaka</span>
+                        </div>
+                        <div class="menu-item-details">
+                            <div class="menu-item-header">
+                                <h3>Chakalaka Relish</h3>
+                                <span class="menu-price">R15</span>
+                            </div>
+                            <p>Traditional South African spicy relish made with beans, peppers, carrots, and secret spices.</p>
+                            <div class="menu-item-footer">
+                                <span class="menu-diet"><i class="fas fa-leaf"></i> Vegan</span>
+                                <span class="menu-diet"><i class="fas fa-pepper-hot"></i> Spicy</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Side 2: Slap Chips -->
+                    <div class="menu-item">
+                        <div class="menu-item-image">
+                            <span>🍟 Slap Chips</span>
+                        </div>
+                        <div class="menu-item-details">
+                            <div class="menu-item-header">
+                                <h3>Slap Chips</h3>
+                                <span class="menu-price">R25</span>
+                            </div>
+                            <p>Soft, thick-cut chips with a generous sprinkle of vinegar and salt. A South African classic!</p>
+                            <div class="menu-item-footer">
+                                <span class="menu-diet"><i class="fas fa-leaf"></i> Vegan</span>
+                                <span class="menu-diet"><i class="fas fa-utensils"></i> Gluten-Free</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Side 3: Onion Rings -->
+                    <div class="menu-item">
+                        <div class="menu-item-image">
+                            <span>🧅 Onion Rings</span>
+                        </div>
+                        <div class="menu-item-details">
+                            <div class="menu-item-header">
+                                <h3>Crunchy Onion Rings</h3>
+                                <span class="menu-price">R20</span>
+                            </div>
+                            <p>Beer-battered onion rings, fried to golden perfection. Served with a tangy dipping sauce.</p>
+                            <div class="menu-item-footer">
+                                <span class="menu-diet"><i class="fas fa-leaf"></i> Vegetarian</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== DRINKS ===== -->
+        <section class="menu-section" data-category="drinks">
+            <div class="container">
+                <h2 class="section-title">Drinks & <span>Refreshments</span></h2>
+                <p class="section-subtitle">Quench your thirst with our selection of beverages</p>
+                
+                <div class="menu-grid">
+                    <!-- Drink 1: Amaas -->
+                    <div class="menu-item">
+                        <div class="menu-item-image">
+                            <span>🥛 Amaas</span>
+                        </div>
+                        <div class="menu-item-details">
+                            <div class="menu-item-header">
+                                <h3>Amaas (Fermented Milk)</h3>
+                                <span class="menu-price">R20</span>
+                            </div>
+                            <p>Traditional South African fermented milk drink, slightly sour and refreshing. A taste of home.</p>
+                            <div class="menu-item-footer">
+                                <span class="menu-diet"><i class="fas fa-leaf"></i> Vegetarian</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Drink 2: Rooibos Iced Tea -->
+                    <div class="menu-item">
+                        <div class="menu-item-image">
+                            <span>🍵 Rooibos Tea</span>
+                        </div>
+                        <div class="menu-item-details">
+                            <div class="menu-item-header">
+                                <h3>Rooibos Iced Tea</h3>
+                                <span class="menu-price">R18</span>
+                            </div>
+                            <p>South Africa's favourite red tea, served chilled with a hint of lemon and honey.</p>
+                            <div class="menu-item-footer">
+                                <span class="menu-diet"><i class="fas fa-leaf"></i> Vegan</span>
+                                <span class="menu-diet"><i class="fas fa-utensils"></i> Caffeine-Free</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Drink 3: Ginger Beer -->
+                    <div class="menu-item">
+                        <div class="menu-item-image">
+                            <span>🫚 Ginger Beer</span>
+                        </div>
+                        <div class="menu-item-details">
+                            <div class="menu-item-header">
+                                <h3>Spicy Ginger Beer</h3>
+                                <span class="menu-price">R18</span>
+                            </div>
+                            <p>Homemade ginger beer with a fiery kick. Brewed in small batches for maximum flavour.</p>
+                            <div class="menu-item-footer">
+                                <span class="menu-diet"><i class="fas fa-leaf"></i> Vegan</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Drink 4: Cold Drinks -->
+                    <div class="menu-item">
+                        <div class="menu-item-image">
+                            <span>🥤 Cold Drink</span>
+                        </div>
+                        <div class="menu-item-details">
+                            <div class="menu-item-header">
+                                <h3>Assorted Cold Drinks</h3>
+                                <span class="menu-price">R12</span>
+                            </div>
+                            <p>Choose from Coke, Fanta, Sprite, or Stoney. All served ice-cold.</p>
+                            <div class="menu-item-footer">
+                                <span class="menu-diet"><i class="fas fa-leaf"></i> Vegan</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== VEGETARIAN OPTIONS ===== -->
+        <section class="menu-section" data-category="veggie">
+            <div class="container">
+                <h2 class="section-title">Vegetarian <span>Delights</span></h2>
+                <p class="section-subtitle">Delicious meat-free options that everyone will love</p>
+                
+                <div class="menu-grid">
+                    <!-- Veggie 1: Veggie Bunny Chow -->
+                    <div class="menu-item">
+                        <div class="menu-item-image">
+                            <span>🌱 Veggie Bunny</span>
+                            <span class="menu-badge">Plant-Based</span>
+                        </div>
+                        <div class="menu-item-details">
+                            <div class="menu-item-header">
+                                <h3>Veggie Bunny Chow <i class="fas fa-leaf" style="color: #2e7d32;"></i></h3>
+                                <span class="menu-price">R55</span>
+                            </div>
+                            <p>Quarter loaf filled with a hearty curry of chickpeas, sweet potatoes, and spinach in a creamy coconut sauce.</p>
+                            <div class="menu-item-footer">
+                                <span class="menu-diet"><i class="fas fa-leaf"></i> Vegan</span>
+                                <span class="menu-diet"><i class="fas fa-pepper-hot"></i> Mild</span>
+                                <a href="enquiry.html" class="btn btn-primary btn-small">Pre-Order</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Veggie 2: Veggie Vetkoek -->
+                    <div class="menu-item">
+                        <div class="menu-item-image">
+                            <span>🌱 Veggie Vetkoek</span>
+                        </div>
+                        <div class="menu-item-details">
+                            <div class="menu-item-header">
+                                <h3>Veggie Vetkoek <i class="fas fa-leaf" style="color: #2e7d32;"></i></h3>
+                                <span class="menu-price">R40</span>
+                            </div>
+                            <p>Golden fried dough filled with curried chickpeas, topped with a tangy mango salsa and fresh herbs.</p>
+                            <div class="menu-item-footer">
+                                <span class="menu-diet"><i class="fas fa-leaf"></i> Vegan</span>
+                                <a href="enquiry.html" class="btn btn-primary btn-small">Pre-Order</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== CATERING SERVICES ===== -->
+        <section class="catering-section">
+            <div class="container">
+                <h2 class="section-title">Corporate & Event <span>Catering</span></h2>
+                <p class="section-subtitle">Make your next event unforgettable with Mzansi Bite's gourmet street food catering</p>
+                
+                <div class="catering-grid">
+                    <div class="catering-card">
+                        <i class="fas fa-building"></i>
+                        <h3>Corporate Events</h3>
+                        <ul>
+                            <li><i class="fas fa-check"></i> Office lunches</li>
+                            <li><i class="fas fa-check"></i> Team building events</li>
+                            <li><i class="fas fa-check"></i> Boardroom meetings</li>
+                            <li><i class="fas fa-check"></i> Year-end functions</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="catering-card">
+                        <i class="fas fa-calendar-alt"></i>
+                        <h3>Private Functions</h3>
+                        <ul>
+                            <li><i class="fas fa-check"></i> Weddings</li>
+                            <li><i class="fas fa-check"></i> Birthday parties</li>
+                            <li><i class="fas fa-check"></i> Family gatherings</li>
+                            <li><i class="fas fa-check"></i> Graduation celebrations</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="catering-card">
+                        <i class="fas fa-music"></i>
+                        <h3>Festivals & Markets</h3>
+                        <ul>
+                            <li><i class="fas fa-check"></i> Music festivals</li>
+                            <li><i class="fas fa-check"></i> Food markets</li>
+                            <li><i class="fas fa-check"></i> Community events</li>
+                            <li><i class="fas fa-check"></i> Sporting events</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="catering-cta">
+                    <p>Enquire about our catering packages and custom menus</p>
+                    <a href="enquiry.html" class="btn btn-primary">Request a Quote</a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ============================================================
+    FOOTER
+    ============================================================ -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-about">
+                    <h3><i class="fas fa-utensils"></i> Mzansi Bite</h3>
+                    <p>Celebrating South Africa's diverse culinary heritage through gourmet street food. Fresh, local, and made with passion.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+                        <a href="#" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><

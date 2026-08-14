@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- ==================================================
+    Mzansi Bite - Pre-Order & Enquiry
+    Author: [Your Name]
+    Student Number: [Your Student Number]
+    Date: August 2026
+    Description: Pre-order and enquiry page for Mzansi Bite
+    ================================================== -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mzansi Bite | Pre-Order & Enquiry - Skip the Queue</title>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@300;400;700&family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- External CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- ==================================================
+    HEADER & NAVIGATION
+    ================================================== -->
+    <header>
+        <div class="header-top">
+            <div class="container">
+                <p class="location-banner">
+                    <i class="fas fa-map-marker-alt"></i> 
+                    Today's Locations: Sandton | Rosebank | Pretoria CBD
+                    <span class="hours"><i class="far fa-clock"></i> 11:00 - 20:00</span>
+                </p>
+            </div>
+        </div>
+        
+        <nav class="navbar">
+            <div class="container">
+                <div class="logo">
+                    <a href="index.html">
+                        <i class="fas fa-utensils"></i>
+                        <span>Mzansi <strong>Bite</strong></span>
+                    </a>
+                </div>
+                
+                <button class="hamburger" aria-label="Toggle navigation">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="services.html">Menu</a></li>
+                    <li><a href="enquiry.html" class="active">Pre-Order</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li class="nav-cta"><a href="enquiry.html" class="btn-order">Order Now</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- ==================================================
+    MAIN CONTENT
+    ================================================== -->
+    <main>
+
+        <!-- ===== PAGE HEADER ===== -->
+        <section class="page-header">
+            <div class="container">
+                <h1>Pre-Order <span>Your Meal</span></h1>
+                <p>Skip the queue and have your meal ready when you arrive! Or enquire about our catering services.</p>
+            </div>
+        </section>
+
+        <!-- ===== ENQUIRY FORM ===== -->
+        <section class="enquiry-section">
+            <div class="container">
+                <div class="enquiry-grid">
+                    <!-- Order Form Column -->
+                    <div class="enquiry-form-col">
+                        <h2><i class="fas fa-shopping-cart"></i> Pre-Order Form</h2>
+                        <p>Fill in your details and select your items. We'll have your meal ready for pickup at your chosen location and time.</p>
+                        
+                        <form id="preorder-form" class="enquiry-form" action="#" method="POST">
+                            <!-- Personal Details -->
+                            <div class="form-group">
+                                <label for="fullname">Full Name <span class="required">*</span></label>
+                                <input type="text" id="fullname" name="fullname" placeholder="e.g., Thabo Nkosi" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="email">Email Address <span class="required">*</span></label>
+                                <input type="email" id="email" name="email" placeholder="you@email.com" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="phone">Phone Number <span class="required">*</span></label>
+                                <input type="tel" id="phone" name="phone" placeholder="+27 82 123 4567" required>
+                            </div>
+                            
+                            <!-- Order Details -->
+                            <div class="form-group">
+                                <label for="location">Pickup Location <span class="required">*</span></label>
+                                <select id="location" name="location" required>
+                                    <option value="">Select a location</option>
+                                    <option value="sandton">Sandton - Nelson Mandela Square</option>
+                                    <option value="rosebank">Rosebank - The Zone</option>
+                                    <option value="pretoria">Pretoria - Hatfield Plaza</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="pickup-time">Pickup Time <span class="required">*</span></label>
+                                <select id="pickup-time" name="pickup-time" required>
+                                    <option value="">Select a time</option>
+                                    <option value="11:00">11:00 AM</option>
+                                    <option value="11:30">11:30 AM</option>
+                                    <option value="12:00">12:00 PM</option>
+                                    <option value="12:30">12:30 PM</option>
+                                    <option value="13:00">1:00 PM</option>
+                                    <option value="13:30">1:30 PM</option>
+                                    <option value="14:00">2:00 PM</option>
+                                    <option value="14:30">2:30 PM</option>
+                                    <option value="15:00">3:00 PM</option>
+                                    <option value="15:30">3:30 PM</option>
+                                    <option value="16:00">4:00 PM</option>
+                                    <option value="16:30">4:30 PM</option>
+                                    <option value="17:00">5:00 PM</option>
+                                    <option value="17:30">5:30 PM</option>
+                                    <option value="18:00">6:00 PM</option>
+                                    <option value="18:30">6:30 PM</option>
+                                    <option value="19:00">7:00 PM</option>
+                                </select>
+                            </div>
+                            
+                            <!-- Menu Items -->
+                            <div class="form-group">
+                                <label>Select Your Items</label>
+                                <div class="menu-checkboxes">
+                                    <label class="checkbox-item">
+                                        <input type="checkbox" name="items" value="Rainbow Bunny Chow - R65">
+                                        <span>Rainbow Bunny Chow <span class="item-price">R65</span></span>
+                                    </label>
+                                    <label class="checkbox-item">
+                                        <input type="checkbox" name="items" value="Smoked Boerewos Roll - R55">
+                                        <span>Smoked Boerewos Roll <span class="item-price">R55</span></span>
+                                    </label>
+                                    <label class="checkbox-item">
+                                        <input type="checkbox" name="items" value="Gourmet Vetkoek - R45">
+                                        <span>Gourmet Vetkoek <span class="item-price">R45</span></span>
+                                    </label>
+                                    <label class="checkbox-item">
+                                        <input type="checkbox" name="items" value="Chicken Kota - R50">
+                                        <span>Chicken Kota <span class="item-price">R50</span></span>
+                                    </label>
+                                    <label class="checkbox-item">
+                                        <input type="checkbox" name="items" value="Veggie Bunny Chow - R55">
+                                        <span>Veggie Bunny Chow <span class="item-price">R55</span></span>
+                                    </label>
+                                    <label class="checkbox-item">
+                                        <input type="checkbox" name="items" value="Slap Chips - R25">
+                                        <span>Slap Chips <span class="item-price">R25</span></span>
+                                    </label>
+                                    <label class="checkbox-item">
+                                        <input type="checkbox" name="items" value="Onion Rings - R20">
+                                        <span>Onion Rings <span class="item-price">R20</span></span>
+                                    </label>
+                                    <label class="checkbox-item">
+                                        <input type="checkbox" name="items" value="Amaas - R20">
+                                        <span>Amaas <span class="item-price">R20</span></span>
+                                    </label>
+                                    <label class="checkbox-item">
+                                        <input type="checkbox" name="items" value="Rooibos Iced Tea - R18">
+                                        <span>Rooibos Iced Tea <span class="item-price">R18</span></span>
+                                    </label>
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="special-requests">Special Requests</label>
+                                <textarea id="special-requests" name="special-requests" rows="3" placeholder="Any dietary requirements, allergies, or special instructions..."></textarea>
+                            </div>
+                            
+                            <!-- Catering Enquiry Option -->
+                            <div class="form-group">
+                                <label for="catering-enquiry">Are you enquiring about catering?</label>
+                                <select id="catering-enquiry" name="catering-enquiry">
+                                    <option value="no">No, this is a regular order</option>
+                                    <option value="yes">Yes, I'd like catering for an event</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group" id="catering-details" style="display:none;">
+                                <label for="event-details">Event Details</label>
+                                <textarea id="event-details" name="event-details" rows="3" placeholder="Tell us about your event: date, number of guests, location, type of event..."></textarea>
+                            </div>
+                            
+                            <button type="submit" class="btn btn-primary btn-submit">
+                                <i class="fas fa-paper-plane"></i> Submit Order
+                            </button>
+                            
+                            <p class="form-disclaimer">* Required fields. We'll confirm your order via WhatsApp or email.</p>
+                        </form>
+                    </div>
+                    
+                    <!-- Info Column -->
+                    <div class="enquiry-info-col">
+                        <div class="info-card">
+                            <h3><i class="fas fa-clock"></i> How It Works</h3>
+                            <ol>
+                                <li>Select your items and pickup location</li>
+                                <li>Choose your preferred pickup time</li>
+                                <li>We'll confirm your order within 15 minutes</li>
+                                <li>Arrive at the truck at your selected time</li>
+                                <li>Skip the queue and enjoy your meal!</li>
+                            </ol>
+                        </div>
+                        
+                        <div class="info-card">
+                            <h3><i class="fas fa-truck"></i> Location Details</h3>
+                            <div class="location-info">
+                                <div class="loc">
+                                    <strong>Sandton</strong>
+                                    <p>Nelson Mandela Square, West St</p>
+                                </div>
+                                <div class="loc">
+                                    <strong>Rosebank</strong>
+                                    <p>The Zone, 3rd Ave</p>
+                                </div>
+                                <div class="loc">
+                                    <strong>Pretoria</strong>
+                                    <p>Hatfield Plaza, Burnett St</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="info-card">
+                            <h3><i class="fas fa-phone-alt"></i> Need Help?</h3>
+                            <p>Call us: <strong>+27 82 123 4567</strong></p>
+                            <p>WhatsApp: <strong>+27 82 123 4567</strong></p>
+                            <p>Email: <strong>info@mzansibite.co.za</strong></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== FAQ ===== -->
+        <section class="faq-section">
+            <div class="container">
+                <h2 class="section-title">Frequently Asked <span>Questions</span></h2>
+                
+                <div class="faq-grid">
+                    <div class="faq-item">
+                        <h3><i class="fas fa-question-circle"></i> How far in advance should I order?</h3>
+                        <p>We recommend ordering at least 30 minutes before your desired pickup time. For larger orders (10+ items), please order 2-3 hours in advance.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h3><i class="fas fa-question-circle"></i> Can I cancel my order?</h3>
+                        <p>Yes, you can cancel up to 15 minutes before your pickup time. Contact us directly via WhatsApp or phone.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h3><i class="fas fa-question-circle"></i> Do you cater for dietary requirements?</h3>
+                        <p>Absolutely! We offer vegetarian, vegan, and halal options. Please mention any allergies or dietary needs in the special requests box.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h3><i class="fas fa-question-circle"></i> How do I pay?</h3>
+                        <p>We accept cash, SnapScan, Zapper, and all major bank cards. You can also pay via EFT - we'll send details with your order confirmation.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ==================================================
+    FOOTER
+    ================================================== -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-about">
+                    <h3><i class="fas fa-utensils"></i> Mzansi Bite</h3>
+                    <p>Celebrating South Africa's diverse culinary heritage through gourmet street food. Fresh, local, and made with passion.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+                        <a href="#" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="services.html">Menu</a></li>
+                        <li><a href="enquiry.html">Pre-Order</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-contact">
+                    <h4>Get In Touch</h4>
+                    <p><i class="fas fa-phone"></i> +27 82 123 4567</p>
+                    <p><i class="fas fa-envelope"></i> info@mzansibite.co.za</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Johannesburg & Pretoria</p>
+                    <p><i class="far fa-clock"></i> Mon-Sat: 11:00 - 20:00</p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2026 Mzansi Bite. All rights reserved.</p>
+                <p>Designed with <i class="fas fa-heart" style="color: #FF6B00;"></i> in South Africa</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ==================================================
+    EXTERNAL JAVASCRIPT
+    ================================================== -->
+    <script src="js/main.js"></script>
+</body>
+</html>
