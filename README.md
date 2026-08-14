@@ -14,6 +14,7 @@ Pre-order system with payment gateway integration
 Event catering enquiry system
 
 Mobile-first responsive design
+decor (chairs and tables)
 
 Target Audience:
 
