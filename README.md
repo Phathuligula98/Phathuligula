@@ -138,7 +138,9 @@ Visual Approach
 - Clean, modern layouts
 
 ---
-📝 License
 
 &copy; 2026 Phathuligula98. All rights reserved.
+Reference list:
+
+Mzansi Bite (Pty) Ltd. 2026. Gourmet South African street food truck: Project repository. [Online]. Available at: https://github.com/Phathuligula98/Phathuligula [Accessed 18 September 2026].
 
